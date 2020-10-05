@@ -11,7 +11,7 @@ void setup() { //Things that we only need to do once at the beginning
     }
   randomSeed(analogRead(0)); //sets up the random number generator. A seed is the root from which numbers are generated
   speed *= random(1, 4); //the time that the system takes between changing lights
-  pinMode(buttonPin, INPUT); //tells the computer that pin 2 is being used as an input
+  pinMode(buttonPin, INPUT_PULLUP); //tells the computer that pin 2 is being used as an input
   Serial.begin(9600);
   Serial.println(speed);
 }
